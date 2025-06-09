@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Gui_Secondary</class>
+ <widget class="QWidget" name="Gui_Secondary">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1033</width>
+    <height>573</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Widget</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="buildingTab">
+      <attribute name="title">
+       <string>Building</string>
+      </attribute>
+      <widget class="QGroupBox" name="buildingSpecGBox">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>469</width>
+         <height>282</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="title">
+        <string>Building Specification</string>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+       <layout class="QFormLayout" name="formLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="cw_Label">
+          <property name="text">
+           <string>Wall heat capacity [J/K]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="cw_LEdit"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="cz_Label">
+          <property name="text">
+           <string>Zone air heat capacity [J/K]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="cz_LEdit"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="cf_Label">
+          <property name="text">
+           <string>Floor hear capacity [J/K]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="cf_LEdit"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="cpip_Label">
+          <property name="text">
+           <string>Pipeline heat capacity [J/K]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="cpip_LEdit"/>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="cwat_Label">
+          <property name="text">
+           <string>Water heat capacity [J/K]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLineEdit" name="cwat_LEdit"/>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="kwoa_Label">
+          <property name="text">
+           <string>Heat transfer coefficient between wall and outside [W/K]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QLineEdit" name="kwoa_LEdit"/>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="kwz_Label">
+          <property name="text">
+           <string>Heat transfer coeffient between wall and inside air [W/K]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1">
+         <widget class="QLineEdit" name="kwz_LEdit"/>
+        </item>
+        <item row="7" column="0">
+         <widget class="QLabel" name="kfz_Label">
+          <property name="text">
+           <string>Heat transfer coefficient between floor and inside air [W/K]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="1">
+         <widget class="QLineEdit" name="kfz_LEdit"/>
+        </item>
+        <item row="8" column="0">
+         <widget class="QLabel" name="kfpip_Label">
+          <property name="text">
+           <string>Heat transfer coefficient between floor and pipeline [W/K]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="1">
+         <widget class="QLineEdit" name="kfpip_LEdit"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QGroupBox" name="HWT_GroupBox">
+       <property name="geometry">
+        <rect>
+         <x>520</x>
+         <y>20</y>
+         <width>435</width>
+         <height>198</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Heat Water Tank</string>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+       <layout class="QFormLayout" name="formLayout_2">
+        <item row="0" column="0">
+         <widget class="QLabel" name="waterCapacity_Label">
+          <property name="text">
+           <string>Water tank capacity [liter]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="waterCapacity_LEdit"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="kwt_Label">
+          <property name="text">
+           <string>Heat transfer coefficient across tank's wall [W/K]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="kwt_LEdit"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="kt_Label">
+          <property name="text">
+           <string>Heat transfer coefficient between tank's layers [W/K]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="kt_LEdit"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="w_Label">
+          <property name="text">
+           <string>Water flow rate [Kg/s]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="w_LEdit"/>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="mhp_dot_Label">
+          <property name="text">
+           <string>Water flow rate of the heat pump [Kg/s]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLineEdit" name="mhp_dot_LEdit"/>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="alpha_Label">
+          <property name="text">
+           <string>Alpha coefficient</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QLineEdit" name="alpha_LEdit"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QGroupBox" name="COP_GroupBox">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>320</y>
+         <width>221</width>
+         <height>198</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Coefficient of Performance</string>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+       <layout class="QFormLayout" name="formLayout_3">
+        <item row="0" column="0">
+         <widget class="QLabel" name="a1_Label">
+          <property name="text">
+           <string>Coefficient, a1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="a1_LEdit"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="a2_Label">
+          <property name="text">
+           <string>Coefficient, a2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="a2_LEdit"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="a3_Label">
+          <property name="text">
+           <string>Coefficient, a3</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="a3_LEdit"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="b1_Label">
+          <property name="text">
+           <string>Coefficient, b1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="b1_LEdit"/>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="b2_Label">
+          <property name="text">
+           <string>Coefficient, b2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLineEdit" name="b2_LEdit"/>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Time constant, tau</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QLineEdit" name="tau_LEdit"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QPushButton" name="buildSaveBtn">
+       <property name="geometry">
+        <rect>
+         <x>920</x>
+         <y>480</y>
+         <width>75</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Save</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="batteryTab">
+      <attribute name="title">
+       <string>Battery</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QTableWidget" name="batTable"/>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame">
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QPushButton" name="batAddBtn">
+            <property name="text">
+             <string>Add</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="batDelBtn">
+            <property name="text">
+             <string>Delete</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="batEditBtn">
+            <property name="text">
+             <string>Edit</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="evTab">
+      <attribute name="title">
+       <string>Electric Vehicle</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QTableWidget" name="evTable"/>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_2">
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QPushButton" name="evAddBtn">
+            <property name="text">
+             <string>Add</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="evDelBtn">
+            <property name="text">
+             <string>Delete</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="evEditBtn">
+            <property name="text">
+             <string>Edit</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pvTab">
+      <attribute name="title">
+       <string>Solar Panel</string>
+      </attribute>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>120</y>
+         <width>391</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>NOCT Parameters</string>
+       </property>
+       <layout class="QFormLayout" name="formLayout_4">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>STC Reference Solar Irradiance [in 1 W/m^2]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="lineEdit_2"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="nOCTModuleTemperatureCLabel">
+          <property name="text">
+           <string>NOCT Module Temperature [in 1 °C]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="T_PV_NOCT_LE"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_3">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>20</y>
+         <width>221</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Module</string>
+       </property>
+       <layout class="QFormLayout" name="formLayout_8">
+        <item row="0" column="0">
+         <widget class="QLabel" name="moduleTypeLabel">
+          <property name="text">
+           <string>Module Type:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="moduleType_LE"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="numberOfModulesLabel">
+          <property name="text">
+           <string>Number of Modules</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QSpinBox" name="num_pv_2"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_4">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>230</y>
+         <width>391</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>STC Parameters</string>
+       </property>
+       <layout class="QFormLayout" name="formLayout_9">
+        <item row="0" column="0">
+         <widget class="QLabel" name="sTCPowerPerModuleLabel">
+          <property name="text">
+           <string>STC Power Per Module [in 1 kW]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="P_PV_STC"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="sTCTemperatureCoefficientOfModuleIn1KWLabel">
+          <property name="text">
+           <string>STC Temperature Coefficient of Module [in 1 kW]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="gamma_PV"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_5">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>340</y>
+         <width>391</width>
+         <height>101</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Test Conditions</string>
+       </property>
+       <layout class="QFormLayout" name="formLayout_10">
+        <item row="0" column="0">
+         <widget class="QLabel" name="sTCReferenceSolarIrradianceIn1WM2Label">
+          <property name="text">
+           <string>STC Reference Solar Irradiance [in 1 W/m^2]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="G_PV_STC"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="sTCReferenceCellTemperatureIn1CLabel">
+          <property name="text">
+           <string>STC Reference Cell Temperature [in 1 °C]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="T_PV_STC"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QPushButton" name="pvSaveBtn">
+       <property name="geometry">
+        <rect>
+         <x>920</x>
+         <y>480</y>
+         <width>75</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Save</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="mpcTab">
+      <attribute name="title">
+       <string>Controller</string>
+      </attribute>
+      <widget class="QGroupBox" name="mpcParamBox">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>40</y>
+         <width>276</width>
+         <height>201</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>MPC Parameter</string>
+       </property>
+       <layout class="QFormLayout" name="formLayout_5">
+        <item row="0" column="0">
+         <widget class="QLabel" name="predictionHorizonNSecondsLabel">
+          <property name="text">
+           <string>Prediction Horizon, N </string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="predHrznLE"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="controlHorizonLabel">
+          <property name="text">
+           <string>Control Horizon, m </string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="cotrlHrznLE"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="samplingTimeSecondsLabel">
+          <property name="text">
+           <string>Sampling Time, [minutes]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="samplingTimeLE"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="daysOfSimulationLabel">
+          <property name="text">
+           <string>Days of Simulation [day]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="daysOfSimLE"/>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="weightingCoefficientQLabel">
+          <property name="text">
+           <string>Weighting Coefficient, Q</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLineEdit" name="weightQ"/>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="weightingCoefficientRLabel">
+          <property name="text">
+           <string>Weighting Coefficient, R</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QLineEdit" name="weightR"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QGroupBox" name="initValueGBox">
+       <property name="geometry">
+        <rect>
+         <x>530</x>
+         <y>50</y>
+         <width>401</width>
+         <height>281</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Initial Value</string>
+       </property>
+       <layout class="QFormLayout" name="formLayout_6">
+        <item row="0" column="0">
+         <widget class="QLabel" name="initialValueForBuildingSWallTwCLabel">
+          <property name="text">
+           <string>Initial Value for Wall Temperature, Tw [°C]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="initTw_LE"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="initialValueForRoomTemperatureTzCLabel">
+          <property name="text">
+           <string>Initial Value for Room Temperature, Tz [°C]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="initTz_LE"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="initialValueForFloorTemperatureTfCLabel">
+          <property name="text">
+           <string>Initial Value for Floor Temperature, Tf [°C]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="initTf_LE"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="initialValueForPipelineTemperatureTpipCLabel">
+          <property name="text">
+           <string>Initial Value for Pipeline Temperature, Tpip [°C]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="initTpip_LE"/>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="initialValueFor1stNodeOfHeatWaterTankT1CLabel">
+          <property name="text">
+           <string>Initial Value for 1st Node of Heat Water Tank, T1 [°C]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLineEdit" name="initT1_LE"/>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="initialValueFor2ndNodeOfHeatWaterTankT2CLabel">
+          <property name="text">
+           <string>Initial Value for 2nd Node of Heat Water Tank, T2 [°C]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QLineEdit" name="initT2_LE"/>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="initialValueFor3rdNodeOfHeatWaterTankT3CLabel">
+          <property name="text">
+           <string>Initial Value for 3rd Node of Heat Water Tank, T3 [°C]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1">
+         <widget class="QLineEdit" name="initT3_LE"/>
+        </item>
+        <item row="7" column="0">
+         <widget class="QLabel" name="initialValueFor4thNodeOfHeatWaterTankT4CLabel">
+          <property name="text">
+           <string>Initial Value for 4th Node of Heat Water Tank, T4 [°C]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="1">
+         <widget class="QLineEdit" name="initT4_LE"/>
+        </item>
+        <item row="8" column="0">
+         <widget class="QLabel" name="initialValueForCOPLabel">
+          <property name="text">
+           <string>Initial Value for COP</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="1">
+         <widget class="QLineEdit" name="initCOP_LE"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>280</y>
+         <width>421</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Reference Value</string>
+       </property>
+       <layout class="QFormLayout" name="formLayout_7">
+        <item row="0" column="0">
+         <widget class="QLabel" name="roomTemperatureCLabel">
+          <property name="text">
+           <string>Room Temperature [°C]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="refTz_LE"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="referenceValueFor1stNodeOfHeatWaterTankCLabel">
+          <property name="text">
+           <string>Reference Value for 1st Node of Heat Water Tank [°C]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="refT1_LE"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="referenceValueForInletWaterTemperatureCLabel">
+          <property name="text">
+           <string>Reference Value for Inlet Water Temperature [°C] </string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="refTe_LE"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="referenceValueForPVSoldLabel">
+          <property name="text">
+           <string>Reference Value for PV sold</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="refPVSold_LE"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QPushButton" name="pushButton">
+       <property name="geometry">
+        <rect>
+         <x>920</x>
+         <y>480</y>
+         <width>75</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Save</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

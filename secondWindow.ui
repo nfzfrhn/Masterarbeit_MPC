@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Gui_Secondary</class>
+ <widget class="QWidget" name="Gui_Secondary">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1033</width>
+    <height>649</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Widget</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="buildingTab">
+      <attribute name="title">
+       <string>Building</string>
+      </attribute>
+      <widget class="QGroupBox" name="buildingSpecGBox">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>469</width>
+         <height>282</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="title">
+        <string>Building Specification</string>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+       <layout class="QFormLayout" name="formLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="cw_Label">
+          <property name="text">
+           <string>Wall heat capacity [J/K]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="cw_LEdit"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="cz_Label">
+          <property name="text">
+           <string>Zone air heat capacity [J/K]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="cz_LEdit"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="cf_Label">
+          <property name="text">
+           <string>Floor hear capacity [J/K]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="cf_LEdit"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="cpip_Label">
+          <property name="text">
+           <string>Pipeline heat capacity [J/K]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="cpip_LEdit"/>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="cwat_Label">
+          <property name="text">
+           <string>Water heat capacity [J/K]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLineEdit" name="cwat_LEdit"/>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="kwoa_Label">
+          <property name="text">
+           <string>Heat transfer coefficient between wall and outside [W/K]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QLineEdit" name="kwoa_LEdit"/>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="kwz_Label">
+          <property name="text">
+           <string>Heat transfer coeffient between wall and inside air [W/K]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1">
+         <widget class="QLineEdit" name="kwz_LEdit"/>
+        </item>
+        <item row="7" column="0">
+         <widget class="QLabel" name="kfz_Label">
+          <property name="text">
+           <string>Heat transfer coefficient between floor and inside air [W/K]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="1">
+         <widget class="QLineEdit" name="kfz_LEdit"/>
+        </item>
+        <item row="8" column="0">
+         <widget class="QLabel" name="kfpip_Label">
+          <property name="text">
+           <string>Heat transfer coefficient between floor and pipeline [W/K]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="1">
+         <widget class="QLineEdit" name="kfpip_LEdit"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QGroupBox" name="HWT_GroupBox">
+       <property name="geometry">
+        <rect>
+         <x>520</x>
+         <y>20</y>
+         <width>435</width>
+         <height>198</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Heat Water Tank</string>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+       <layout class="QFormLayout" name="formLayout_2">
+        <item row="0" column="0">
+         <widget class="QLabel" name="waterCapacity_Label">
+          <property name="text">
+           <string>Water tank capacity [liter]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="waterCapacity_LEdit"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="kwt_Label">
+          <property name="text">
+           <string>Heat transfer coefficient across tank's wall [W/K]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="kwt_LEdit"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="kt_Label">
+          <property name="text">
+           <string>Heat transfer coefficient between tank's layers [W/K]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="kt_LEdit"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="w_Label">
+          <property name="text">
+           <string>Water flow rate [Kg/s]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="w_LEdit"/>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="mhp_dot_Label">
+          <property name="text">
+           <string>Water flow rate of the heat pump [Kg/s]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLineEdit" name="mhp_dot_LEdit"/>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="alpha_Label">
+          <property name="text">
+           <string>Alpha coefficient</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QLineEdit" name="alpha_LEdit"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QGroupBox" name="COP_GroupBox">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>320</y>
+         <width>221</width>
+         <height>198</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Coefficient of Performance</string>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+       <layout class="QFormLayout" name="formLayout_3">
+        <item row="0" column="0">
+         <widget class="QLabel" name="a1_Label">
+          <property name="text">
+           <string>Coefficient, a1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="a1_LEdit"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="a2_Label">
+          <property name="text">
+           <string>Coefficient, a2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="a2_LEdit"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="a3_Label">
+          <property name="text">
+           <string>Coefficient, a3</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="a3_LEdit"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="b1_Label">
+          <property name="text">
+           <string>Coefficient, b1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="b1_LEdit"/>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="b2_Label">
+          <property name="text">
+           <string>Coefficient, b2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLineEdit" name="b2_LEdit"/>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Time constant, tau</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QLineEdit" name="lineEdit"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="batteryTab">
+      <attribute name="title">
+       <string>Battery</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QTableWidget" name="batTable"/>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame">
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QPushButton" name="batAddBtn">
+            <property name="text">
+             <string>Add</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="batDelBtn">
+            <property name="text">
+             <string>Delete</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="batEditBtn">
+            <property name="text">
+             <string>Edit</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="evTab">
+      <attribute name="title">
+       <string>Electric Vehicle</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QTableWidget" name="evTable"/>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_2">
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QPushButton" name="evAddBtn">
+            <property name="text">
+             <string>Add</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="evDelBtn">
+            <property name="text">
+             <string>Delete</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="evEditBtn">
+            <property name="text">
+             <string>Edit</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pvTab">
+      <attribute name="title">
+       <string>Solar Panel</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QTableWidget" name="tableWidget"/>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_3">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QPushButton" name="pvAddBtn">
+            <property name="text">
+             <string>Add</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pvDelBtn">
+            <property name="text">
+             <string>Delete</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pvEditBtn">
+            <property name="text">
+             <string>Edit</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>423</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="text">
+         <string>Save</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="text">
+         <string>Cancel</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
