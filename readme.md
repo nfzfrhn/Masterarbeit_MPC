@@ -18,13 +18,15 @@ To run the project, run **gui_main.py**
 ## controller.py
 
 For the controller, the configuration are not adapted to other parameter such as:
-	
-	-Prediction horizon	: Currently is set to 24 hours correspond to 96 step when sampling time is 15 minutes.
-	-control horizon	: Currently set to 1, but changing it to other number will require an adaptation in function "shift_timestep(t,x,u,h)". So now it is fix to 1
-	-sampling time 		: When this is changed, the interval of the uploaded data also need to be changed. At the moment, the sampling time is fixed to 15 minutes.
-	-Duration of Sim.	: The current data only contain information for 6 days, therefore value cannot be more that 6.
-	-Room Temperature	: Parameter is not used and this parameter can be used for future improvement.
-	-Range of tol. 		: Parameter is not used and this parameter can be used for future improvement.
+
+|Parameter|Description|
+|--|-----------|
+|Prediction horizon|Currently is set to 24 hours correspond to 96 step when sampling time is 15 minutes.|
+|control horizon|Currently set to 1, but changing it to other number will require an adaptation in function "shift_timestep(t,x,u,h)". So now it is fix to 1|
+|sampling time|When this is changed, the interval of the uploaded data also need to be changed. At the moment, the sampling time is fixed to 15 minutes.|
+|Duration of Sim.|The current data only contain information for 6 days, therefore value cannot be more that 6.|
+|Room Temperature|Parameter is not used and this parameter can be used for future improvement.|
+|Range of tolerance|Parameter is not used and this parameter can be used for future improvement.|
 
 When executed, a progress bar will pop up and inform the user how many percent the computation already completed. 
 
@@ -41,3 +43,15 @@ iteration is completed, it will be alright again.
 |Heat Pump|- They are first initialize with a default value. User can change this value and save it. Rerunning the program will load the last save value. <br>- When saving to database is succesfull, a pop-up window will appear.|
 |Solar Panel| - They are first initialize with a default value. User can change this value and save it. Rerunning the program will load the last save value. <br> - When saving to database is succesfull, a pop-up window will appear.|
 |Controller| - They are first initialize with a default value. User can change this value and save it. Rerunning the program will load the last save value. <br>- When saving to database is succesfull, a pop-up window will appear.<br> - The modes are associated with a certain value for enumeration purpose(except "Advance Setting..."). <br> Default Model: 1<br>Energy Saving Mode: 2<br>Economic Model	: 3|
+
+# Figure
+
+The following are the overview result of the relationship between battery consumption, EV consumption, SOC of battery, SOC of EV, room temperature, power drawn out from the grid, COP of the heat pump and disturbances such as energy prices, sunlight intensity.
+
+![Result](Figure/Figure_1.jpg)
+
+# Video
+
+The following video show the final program of the Master thesis -  graphical user interface for the modular Model Predictive Control. The user can specify the parameter for the heat pump,battery, electric vehicle, solar panel and controller.
+
+![Demo](media/DemoMPC.mkv)
